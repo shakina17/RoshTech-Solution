@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Login | RoshTech Solutions</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="admin-login-section">
+
+<div class="login-box">
+
+    <h1>Admin Login</h1>
+
+<p>Only administrators can access this panel.</p>
+
+<form action="/admin-login" method="POST">
+
+    <input
+    type="text"
+    name="username"
+    placeholder="Username"
+    required>
+
+    <input
+    type="password"
+    name="password"
+    placeholder="Password"
+    required>
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>
+
+<p class="bottom-text">
+
+RoshTech Solutions Admin Panel
+
+</p>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
