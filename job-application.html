@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Application | RoshTech Solutions</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Poppins,sans-serif;
+    background:#f4f7fc;
+}
+
+.application-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:50px 20px;
+}
+
+.application-box{
+
+    width:600px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.application-box h1{
+
+    text-align:center;
+    color:#0A192F;
+    margin-bottom:10px;
+
+}
+
+.application-box p{
+
+    text-align:center;
+    color:gray;
+    margin-bottom:30px;
+
+}
+
+.application-box input,
+.application-box select,
+.application-box textarea{
+
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+
+}
+
+.application-box textarea{
+
+    resize:none;
+    height:120px;
+
+}
+
+.application-box button{
+
+    width:100%;
+    padding:15px;
+    margin-top:5px;
+    background:#0A192F;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+
+}
+
+.application-box button:hover{
+
+    background:#16345c;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="application-section">
+
+<div class="application-box">
+
+<h1>Apply for a Job</h1>
+
+<p>Join the RoshTech Solutions Team</p>
+
+<form action="/apply-job" method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<input
+type="text"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<select name="position" required>
+
+<option value="">Select Position</option>
+
+<option>Frontend Developer</option>
+
+<option>Backend Developer</option>
+
+<option>Full Stack Developer</option>
+
+<option>UI/UX Designer</option>
+
+<option>Mobile App Developer</option>
+
+<option>QA Tester</option>
+
+</select>
+
+<input
+type="text"
+name="experience"
+placeholder="Experience (Example: Fresher / 2 Years)"
+required>
+
+<input
+type="text"
+name="skills"
+placeholder="Skills"
+required>
+
+<textarea
+name="address"
+placeholder="Address"
+required></textarea>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+</body>
+</html>
