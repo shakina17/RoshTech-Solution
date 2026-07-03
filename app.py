@@ -55,12 +55,7 @@ def register_page():
 
 @app.route("/admin-login")
 def admin_login_page():
-
-    if "admin" in session:
-        return redirect("/admin")
-
-    return render_template("admin-login.html")
-
+    return "Admin Login Working"
 
 
 @app.route("/logout")
